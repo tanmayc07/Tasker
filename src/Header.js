@@ -5,6 +5,7 @@ const Header = () => {
     <Center
       bg="#77eaff"
       borderRadius="15px"
+      shadow="md"
       w="80%"
       p={4}
       my={4}
