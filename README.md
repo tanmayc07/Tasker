@@ -5,6 +5,7 @@
 ![](https://img.shields.io/node/v-lts/react/latest)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Naereen/badges/)
 [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg)](https://github.com/Naereen/badges)
+[![Generic badge](https://img.shields.io/badge/status-in_progress-yellow.svg)](https://shields.io/)
 
 ### Steps to run locally
 - Clone the repository.
