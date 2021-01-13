@@ -1,18 +1,13 @@
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Text, IconButton, Flex, Spacer } from "@chakra-ui/react";
+import { DeleteIcon } from "@chakra-ui/icons";
 
-const Todo = ({ title, desc, ...rest }) => {
+const Todo = ({ desc }) => {
   return (
-    <Box
-      p={5}
-      shadow="md"
-      borderWidth="1px"
-      flex="1"
-      borderRadius="md"
-      {...rest}
-    >
-      <Heading fontSize="xl">{title}</Heading>
-      <Text mt={4}>{desc}</Text>
-    </Box>
+    <Flex p={5} shadow="md" borderWidth="1px" flex="1" borderRadius="md">
+      <Text>{desc}</Text>
+      <Spacer />
+      <IconButton aria-label="Delete Todo" icon={<DeleteIcon />} />
+    </Flex>
   );
 };
 
