@@ -4,7 +4,7 @@ import { DeleteIcon } from "@chakra-ui/icons";
 const Todo = ({ desc }) => {
   return (
     <Flex p={5} shadow="md" borderWidth="1px" flex="1" borderRadius="md">
-      <Text>{desc}</Text>
+      <Text fontSize={{ sm: "12px", md: "20px" }}>{desc}</Text>
       <Spacer />
       <IconButton aria-label="Delete Todo" icon={<DeleteIcon />} />
     </Flex>

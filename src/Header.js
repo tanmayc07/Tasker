@@ -12,7 +12,7 @@ const Header = () => {
       mx="auto"
       color="white"
     >
-      <Heading as="h1" size="4xl" isTruncated>
+      <Heading as="h1" fontSize={{ base: "37px", md: "48px" }} isTruncated>
         React Todo
       </Heading>
     </Center>
