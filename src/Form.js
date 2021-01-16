@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Button, Textarea } from "@chakra-ui/react";
 
-const Form = () => {
+const Form = ({ handleCreate }) => {
   const [value, setValue] = useState("");
 
   const handleInputChange = (e) => {
@@ -10,7 +10,7 @@ const Form = () => {
   };
 
   const handleSubmit = () => {
-    console.log(value);
+    handleCreate(value);
   };
 
   return (

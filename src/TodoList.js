@@ -1,7 +1,7 @@
 import { SimpleGrid } from "@chakra-ui/react";
 import Todo from "./Todo";
 
-const TodoList = () => {
+const TodoList = ({ tasks }) => {
   return (
     <>
       <SimpleGrid
