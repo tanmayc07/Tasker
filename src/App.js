@@ -19,10 +19,14 @@ function App() {
     );
   };
 
+  const handleDeleteAll = () => {
+    setTasks([]);
+  };
+
   return (
     <div className="App">
       <Header />
-      <Form handleCreate={handleCreate} />
+      <Form handleCreate={handleCreate} handleDeleteAll={handleDeleteAll} />
       <TodoList tasks={tasks} handleDelete={handleDelete} />
     </div>
   );

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, Button, HStack, Textarea } from "@chakra-ui/react";
 
-const Form = ({ handleCreate }) => {
+const Form = ({ handleCreate, handleDeleteAll }) => {
   const [value, setValue] = useState("");
 
   const handleInputChange = (e) => {
@@ -52,7 +52,7 @@ const Form = ({ handleCreate }) => {
           size="lg"
           shadow="md"
           _hover={{ bg: "#77EAFF", opacity: 0.6 }}
-          onClick={handleSubmit}
+          onClick={handleDeleteAll}
         >
           Delete All
         </Button>
