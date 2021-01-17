@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Button, Textarea } from "@chakra-ui/react";
+import { Box, Button, HStack, Textarea } from "@chakra-ui/react";
 
 const Form = ({ handleCreate }) => {
   const [value, setValue] = useState("");
@@ -11,13 +11,13 @@ const Form = ({ handleCreate }) => {
 
   const handleSubmit = (e) => {
     handleCreate(value);
-    e.target.value = "";
+    setValue("");
   };
 
   return (
     <Box
       display={{ md: "flex" }}
-      w={{ base: "80%", md: "40%" }}
+      w={{ base: "80%", md: "50%" }}
       my={10}
       mx="auto"
       p={4}
@@ -35,7 +35,7 @@ const Form = ({ handleCreate }) => {
         my={3}
         p={2}
       />
-      <Box m="auto">
+      <HStack m="auto">
         <Button
           color="white"
           bg="#77EAFF"
@@ -44,9 +44,19 @@ const Form = ({ handleCreate }) => {
           _hover={{ bg: "#77EAFF", opacity: 0.6 }}
           onClick={handleSubmit}
         >
-          Submit
+          Add Task
         </Button>
-      </Box>
+        <Button
+          color="white"
+          bg="#77EAFF"
+          size="lg"
+          shadow="md"
+          _hover={{ bg: "#77EAFF", opacity: 0.6 }}
+          onClick={handleSubmit}
+        >
+          Delete All
+        </Button>
+      </HStack>
     </Box>
   );
 };

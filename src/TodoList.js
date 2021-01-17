@@ -1,10 +1,10 @@
 import { Center, Heading, SimpleGrid } from "@chakra-ui/react";
 import Todo from "./Todo";
 
-const TodoList = ({ tasks }) => {
+const TodoList = ({ tasks, handleDelete }) => {
   return (
     <>
-      {!tasks && (
+      {tasks !== undefined && tasks.length === 0 && (
         <Center>
           <Heading as="h5" fontSize={{ base: "20px", md: "25px" }}>
             No tasks currently...
@@ -21,7 +21,14 @@ const TodoList = ({ tasks }) => {
           columns={{ sm: 2, md: 3 }}
         >
           {tasks.map((task) => {
-            return <Todo desc={task} key={tasks.indexOf(task)} />;
+            return (
+              <Todo
+                desc={task.value}
+                key={task.id}
+                task={task}
+                handleDelete={handleDelete}
+              />
+            );
           })}
         </SimpleGrid>
       )}
