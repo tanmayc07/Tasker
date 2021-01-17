@@ -9,8 +9,9 @@ const Form = ({ handleCreate }) => {
     setValue(input);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     handleCreate(value);
+    e.target.value = "";
   };
 
   return (

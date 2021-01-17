@@ -4,15 +4,17 @@ import TodoList from "./TodoList";
 import { useState } from "react";
 
 function App() {
-  const [tasks, setTasks] = useState({});
+  const [tasks, setTasks] = useState(null);
 
   const handleCreate = (value) => {
-    // setTasks({
-    //   ...tasks,
-    //   value,
-    // });
-    console.log(value);
+    if (tasks === null) {
+      setTasks([value]);
+    } else {
+      setTasks([...tasks, value]);
+    }
   };
+
+  console.log(tasks);
 
   return (
     <div className="App">
