@@ -1,6 +1,6 @@
-import Header from "./Header";
-import Form from "./Form";
-import TodoList from "./TodoList";
+import Header from "./components/Header";
+import Form from "./components/Form";
+import TodoList from "./components/TodoList";
 import { useState } from "react";
 import { v1 as v1id } from "uuid";
 // import Footer from "./Footer";
