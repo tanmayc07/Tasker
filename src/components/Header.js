@@ -13,7 +13,7 @@ const Header = () => {
       color="white"
     >
       <Heading as="h1" fontSize={{ base: "37px", md: "48px" }} isTruncated>
-        React Todo
+        Tasker
       </Heading>
     </Center>
   );

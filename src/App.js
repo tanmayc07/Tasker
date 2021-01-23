@@ -11,15 +11,26 @@ function App() {
   const toast = useToast();
 
   const handleCreate = (value) => {
-    setTasks([...tasks, { id: v1id(), value }]);
-    toast({
-      position: "bottom-left",
-      title: "Success",
-      description: "Task Created!",
-      status: "success",
-      duration: 9000,
-      isClosable: true,
-    });
+    if (value !== "") {
+      setTasks([...tasks, { id: v1id(), value }]);
+      toast({
+        position: "bottom-left",
+        title: "Success",
+        description: "Task Created!",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        position: "bottom",
+        title: "Something's Wrong",
+        description: "Please enter some value!",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    }
   };
 
   const handleDelete = (id) => {
@@ -39,15 +50,26 @@ function App() {
   };
 
   const handleDeleteAll = () => {
-    setTasks([]);
-    toast({
-      position: "bottom-left",
-      title: "Success",
-      description: "Tasks Deleted!",
-      status: "success",
-      duration: 9000,
-      isClosable: true,
-    });
+    if (tasks.length !== 0) {
+      setTasks([]);
+      toast({
+        position: "bottom-left",
+        title: "Success",
+        description: "Tasks Deleted!",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        position: "bottom",
+        title: "Something's Wrong",
+        description: "There are no tasks to delete!",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    }
   };
 
   return (

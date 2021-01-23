@@ -25,7 +25,7 @@ const Form = ({ handleCreate, handleDeleteAll }) => {
       <Textarea
         value={value}
         onChange={handleInputChange}
-        placeholder="Enter the Todo..."
+        placeholder="Enter the Task..."
         size="lg"
         shadow="md"
         border="1px"
